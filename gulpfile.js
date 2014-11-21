@@ -1,5 +1,5 @@
 'use strict';
-// generated on 2014-11-20 using generator-gulp-webapp 0.1.0
+// generated on 2014-11-21 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
 
@@ -7,7 +7,11 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.css')
+    return gulp.src('app/styles/main.scss')
+        .pipe($.rubySass({
+            style: 'expanded',
+            precision: 10
+        }))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
@@ -87,13 +91,19 @@ gulp.task('connect', function () {
         });
 });
 
-gulp.task('serve', ['connect'], function () {
+gulp.task('serve', ['connect', 'styles'], function () {
     require('opn')('http://localhost:9000');
 });
 
 // inject bower components
 gulp.task('wiredep', function () {
     var wiredep = require('wiredep').stream;
+
+    gulp.src('app/styles/*.scss')
+        .pipe(wiredep({
+            directory: 'app/bower_components'
+        }))
+        .pipe(gulp.dest('app/styles'));
 
     gulp.src('app/*.html')
         .pipe(wiredep({
@@ -116,7 +126,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
         server.changed(file.path);
     });
 
-    gulp.watch('app/styles/**/*.css', ['styles']);
+    gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep']);
