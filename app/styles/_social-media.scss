@@ -1,12 +1,22 @@
 .social-media {
+  @include clearfix;
   list-style-type: none;
-  margin:10 0 0 0;
+  margin:0;
   padding:0;
+  clear: both;
 }
 
 li{
   float: left;
-  display: inline-block;
   margin: 0;
-  padding:0 0 0 .7em;
+}
+
+a {
+  padding: 0.25em;
+  display: inline-block;
+  color: $black;
+}
+
+a:hover {
+  color: $blue;
 }

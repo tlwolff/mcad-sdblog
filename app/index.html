@@ -9,11 +9,17 @@
 
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 
   <script src="//use.typekit.net/ffq2tjo.js"></script>
@@ -26,19 +32,22 @@
   <![endif]-->
 
   <header>
-    <div class="header">
-      <h1>Minneapolis College of Art and Design<span>Sustainable Design Online Program</span></h1>
-    </div>
+      <h1 class="blog-title">
+        <span class="logo-mcad">Minneapolis College of Art and Design</span>
+        <span class="logo-sdo">Sustainable Design Online Program</span>
+      </h1>
 
-    <nav class="sub-nav">
+    <nav>
+      <ul class="header-utilities">
+        <li class="brochure"><a href="#"><span class="line">Request a</span> brochure</a></li>
+        <li><a href="#"><span class="line">mcad.edu/</span>sustainable</a></li>
+      </ul>
       <ul>
-        <li><a href="#">Requset a Brochure</a></li>
-        <li><a href="#">mcad.edu/sustainable</a></li>
         <li><a href="#">MCAD</a></li>
       </ul>
     </nav>
 
-    <nav id="main-nav">
+    <nav class="main-nav">
       <ul>
         <li><a href="#">STUDENTS</a></li>
         <li><a href="#">FACULTY</a></li>
@@ -51,77 +60,76 @@
   </div>
 </header>
 
-<div class="main-article">
-  <article id="post-1">
-    <p>July 9, 2014</p>
-    <p>Natural Leadership</p>
-    <h1> Sustainability Bucket List</h1>
-    <a href="#"><img src="images/post1.jpg" alt="Playing B-ball with Obama"></a>
-  </article>
+<body>
 
-  <article id="post-2">
-    <p>Februaury 26, 2014</p>
-    <p>Eco-carrers</p>
-    <h1>Visual Communications for Sustainability</h1>
-    <a href="#"><img src="images/post2.jpg" alt="Mallomar Food Graph"></a>
-  </article>
+    <div class="container">
+      <article class="article-block category-blue block-medium">>
+        <p class="post-date">July 9, 2014</p>
+        <p class="category">Natural Leadership</p>
+        <h1> Sustainability Bucket List</h1>
+        <img src="images/post1.jpg" alt="Playing B-ball with Obama">
+      </article>
 
-  <article id="post-3">
-    <p>November 13, 2013</p>
-    <p>Innovation and Entrepreneurship</p>
-    <h1>Designers Emerge as Entrepreneuers</h1>
-    <a href="#"><img src="images/post3.jpg" alt="Innovation Diagram"></a>
-  </article>
 
-  <article id="post-4">
-    <p>February 20, 2014</p>
-    <p>Biomimicry</p>
-    <h1>Design Rules for Sustainability</h1>
-    <a href="#"><img src="images/post4.jpg" alt="The Geometry of Thinking"></a>
-  </article>
+        <article class="article-block category-yellow block-large">>
+          <p class="post-date">Februaury 26, 2014</p>
+          <p class="category">Eco-carrers</p>
+          <h1>Visual Communications for Sustainability</h1>
+          <img src="images/post2.jpg" alt="Mallomar Food Graph">
+      </article>
 
-  <article id="post-5">
-    <p>February 10, 2014</p>
-    <p>Green Graphic and Packaging Design</p>
-    <h1>Background Stories</h1>
-    <a href="#"><img src="images/post5.jpg" alt="Columbian Bean Diagram"></a>
-  </article>
 
-  <article id="post-6">
-    <p>January 30, 2014</p>
-    <p>Innovation and Entrepreneurship</p>
-    <h1>Green Redesigns by Virtual Teams at MCAD</h1>
-    <a href="#"><img src="images/post5.jpg" alt="Graphs and diagrams"></a>
-  </article>
+          <article class="article-block category-green block-small">
+          <p class="post-date">February 20, 2014</p>
+          <p class="category">Biomimicry</p>
+          <h1>Designers Emerge as Entreprenuers</h1>
+          <img src="images/post3.jpg" alt="The Geometry of Thinking">
+      </article>
 
-  <article id="post-7">
-    <p>January 15, 2014</p>
-    <p>About the MA Program</p>
-    <h1>Educating Global Change Agents</h1>
-    <a href="#"><img src="images/post7.jpg" alt="Curly leaf"></a>
-  </article>
 
-</div>
+          <article class="article-block category-pink block-medium">
+          <p class="post-date">Feb 20,2014</p>
+          <p class="category">Biomimicry</p>
+          <h1>Design Rules for Sustainability</h1>
+          <img src="images/post4.jpg" alt="Diagram of a business model">
+      </article>
+
+
+          <article class="article-block category-red block-large">
+          <p class="post-date">February 10, 2014</p>
+          <p class="category">Green Graphic and Packaging Design</p>
+          <h1>Background Stories</h1>
+          <img src="images/post5.jpg" alt="Columbian Bean Diagram">
+      </article>
+
+
+        <article class="article-block category-green block-large">
+          <p class="post-date">January 30, 2014</p>
+          <p class="category">Innovation and Entrepreneurship</p>
+          <h1>Green Redesigns by Virtual Teams at MCAD</h1>
+          <img src="images/post6.jpg" alt="Graphs and diagrams">
+      </article>
+
+      
+        <article class="article-block category-purple block-medium">
+          <p class="post-date">January 15, 2014</p>
+          <p class="category">About the MA Program</p>
+          <h1>Educating Global Change Agents</h1>
+          <img src="images/post7.jpg" alt="Curly leaf">
+        </article>
+      </div>
 
 </body>
 
-<footer>
-
-  <div class="footer">
-    <p>Minneapolis College of Art and Design 2014</p>
-
-    <nav class="media-nav">
-      <ul>
-        <li><a href="#">facebook</a></li>
-        <li><a href="#">twitter</a></li>
-        <li><a href="#">pinterest</a></li>
-        <li><a href="#">linkedin</a></li>
-      </ul>
-    </nav>
-  </div>
-
+<footer class="page-footer">
+  <p>Minneapolis College of Art and Design &copy; 2014</p>
+  <ul class="social-media">
+     <li><a href="#"><i class="fa fa-facebook"></i> <span class="visuallyhidden">facebook</span></li>
+      <li><a href="#"><i class="fa fa-twitter"></i> <span class="visuallyhidden">twitter</span></li>
+      <li><a href="#"><i class="fa fa-pinterest"></i> <span class="visuallyhidden">pinterest</span></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i> <span class="visuallyhidden">linked-in</span></li>
+    </ul>
 </footer>
-
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

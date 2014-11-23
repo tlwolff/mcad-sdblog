@@ -14,3 +14,11 @@
     display: table;
     clear: both;
   }
+
+  @mixin gradient-to-solid-hover($color: $green)
+  {
+    background: linear-gradient($color, transparent);
+    &:hover {
+      background: $color;
+    }
+  }
